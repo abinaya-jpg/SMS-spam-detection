@@ -12,9 +12,9 @@ nltk.download('wordnet', quiet=True)
 
 # Load the trained model, vectorizer, and label encoder
 try:
-    model = joblib.load('/content/logistic_regression_sms_spam_model.pkl')
-    tfidf_vectorizer = joblib.load('/content/tfidf_vectorizer.pkl')
-    le = joblib.load('/content/label_encoder.pkl')
+    model = joblib.load('logistic_regression_sms_spam_model.pkl')
+    tfidf_vectorizer = joblib.load('tfidf_vectorizer.pkl')
+    le = joblib.load('label_encoder.pkl')
 except FileNotFoundError:
     st.error("Model, vectorizer, or label encoder files not found. Please ensure they are saved in the correct location.")
     st.stop()
